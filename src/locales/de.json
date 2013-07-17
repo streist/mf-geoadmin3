@@ -159,5 +159,21 @@
 	"uploading_file": "Datei wird hochgeladen...",
 	"void_layer": "kein Hintergrund",
 	"wms": "WMS",
-	"wms_max_size_allowed": "Maximal erlaubte WMS Grösse"
+	"wms_max_size_allowed": "Maximal erlaubte WMS Grösse",
+	"Catalog_default": "Catalog_default",
+	"Choose theme": "Choose theme",
+	"Close menu": "Close menu",
+	"Elevation": "Höhe",
+	"Layer Selection": "Auswahl",
+	"Legend": "Legende",
+	"Map tools": "Map tools",
+	"Open menu": "Open menu",
+	"Position": "Position",
+	"Share": "Share",
+	"Shorten URL": "Kurze URL",
+	"mf.print.layout": "Orientierung",
+	"mf.print.scale": "Massstab",
+	"print action": "Drucken",
+  "Help": "Hilfe",
+  "Close": "Schliessen"
 }

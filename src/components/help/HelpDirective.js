@@ -35,7 +35,7 @@
               helpId: '@gaHelp'
             },
             replace: true,
-            templateUrl: 'src/help/partials/help.html',
+            templateUrl: 'components/help/partials/help.html',
             link: function(scope, element, attrs) {
               var queryParams = gaPermalink.getParams();
               var modal = true;
