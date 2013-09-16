@@ -19390,7 +19390,7 @@ ol.renderer.canvas.TileLayer.prototype.renderFrame = function(frameState, layerS
   var findLoadedTiles = goog.bind(tileSource.findLoadedTiles, tileSource, tilesToDrawByZ, getTileIfLoaded);
   var tmpExtent = ol.extent.createEmpty();
   var tmpTileRange = new ol.TileRange(0, 0, 0, 0);
-  var childTileRange, fullyLoaded, tile, tileState, x, y;
+  var childTileRange, tile, tileState, x, y;
   for(x = tileRange.minX;x <= tileRange.maxX;++x) {
     for(y = tileRange.minY;y <= tileRange.maxY;++y) {
       tile = tileSource.getTile(z, x, y, projection);
@@ -19399,14 +19399,7 @@ ol.renderer.canvas.TileLayer.prototype.renderFrame = function(frameState, layerS
         tilesToDrawByZ[z][tile.tileCoord.toString()] = tile;
         continue
       }
-      fullyLoaded = tileGrid.forEachTileCoordParentTileRange(tile.tileCoord, findLoadedTiles, null, tmpTileRange, tmpExtent);
-      if(!fullyLoaded) {
-        tilesToClear.push(tile);
-        childTileRange = tileGrid.getTileCoordChildTileRange(tile.tileCoord, tmpTileRange, tmpExtent);
-        if(!goog.isNull(childTileRange)) {
-          findLoadedTiles(z + 1, childTileRange)
-        }
-      }
+      tilesToClear.push(tile)
     }
   }
   var i, ii;
