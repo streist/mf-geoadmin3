@@ -17,7 +17,10 @@
    * You need to add your id to the help service
    *
    * Sample html:
-   * <div ga-help="my-help-id"></div>
+   * <div ga-help="11"></div>
+   * Multiple id's can be specified, separated by commas and
+   * they will appear in the same window
+   * <span ga-help="12,13,14"></div>
   */
   module.directive('gaHelp',
       function($document, gaHelpService, gaPopup) {
