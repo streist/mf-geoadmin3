@@ -21,48 +21,66 @@
   */
   module.directive('gaHelp',
       function($document, gaHelpService, gaPopup) {
-        var popupContent = '<div class="ga-help-content">' +
-                             '<h2 ng-bind="options.rows[1]"></h2>' +
-                             '<div ng-bind="options.rows[2]"></div>' +
-                             '<img ng-src="{{options.rows[4]}}"/>' +
+        var popupContent = '<div class="ga-help-content" ' +
+                              'ng-repeat="res in options.results">' +
+                                 '<h2 ng-bind="res[1]"></h2>' +
+                                 '<div ng-bind="res[2]"></div>' +
+                                 '<img ng-src="{{res[4]}}"/>' +
                            '</div>';
-        var popup;
 
         return {
           restrict: 'A',
           scope: {
-            helpId: '@gaHelp'
+            helpIds: '@gaHelp'
           },
           replace: true,
           templateUrl: 'components/help/partials/help.html',
           link: function(scope, element, attrs) {
+            var popup;
+            var results = [];
 
             scope.displayHelp = function() {
               if (angular.isDefined(popup)) {
                 popup.open();
               } else {
+                var ids = scope.helpIds.split(',');
+
                 var waitClass = 'metadata-popup-wait';
                 var bodyEl = angular.element($document[0].body);
                 bodyEl.addClass(waitClass);
 
-                var promise = gaHelpService.get(scope.helpId);
+                var len = ids.length;
+                var resCount = 0;
+                var i, id;
+                for (i = 0; i < len; i++) {
 
-                promise.then(function(res) {
-                  bodyEl.removeClass(waitClass);
-                  popup = gaPopup.create({
-                    className: 'ga-help-popup',
-                    destroyOnClose: false,
-                    title: 'help',
-                    content: popupContent,
-                    rows: res.rows[0]
+                  gaHelpService.get(ids[i])
+                  .then(function(res) {
+                    resCount++;
+                    if (resCount == len) {
+                      bodyEl.removeClass(waitClass);
+                    }
+                    if (results.length === 0) {
+                      popup = gaPopup.create({
+                        className: 'ga-help-popup',
+                        destroyOnClose: false,
+                        title: 'help',
+                        content: popupContent,
+                        results: results
+                      });
+                      popup.open();
+                    }
+                    results.push(res.rows[0]);
+                  }, function() {
+                    resCount++;
+                    if (resCount == len) {
+                      bodyEl.removeClass(waitClass);
+                    }
+                    //FIXME: better error handling
+                    var msg = 'No help found for id ' + ids[i];
+                    alert(msg);
                   });
-                  popup.open();
-                }, function() {
-                  bodyEl.removeClass(waitClass);
-                  //FIXME: better error handling
-                  var msg = 'No help found for id ' + scope.helpId;
-                  alert(msg);
-                });
+                }
               }
             };
           }

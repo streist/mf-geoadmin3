@@ -91,7 +91,6 @@
           ga-background-layer-selector-map="map"></div>
         <div id="toptools">
           <span style="color:red;font-size:80%;">BETA version</span>
-          <span ga-help="11"></span>
           <a href="#feedback" data-toggle="modal" translate>problem_announcement</a>&nbsp;&nbsp;
           <a target="_blank" ng-href="{{topicId + '_help_link_href' | translate}}" translate>help_label</a>&nbsp;&nbsp;
           <a ng-href="{{deviceSwitcherHref}}" translate>mobile_redirect</a>&nbsp;&nbsp;
@@ -99,6 +98,7 @@
             <div ga-translation-selector
               ga-translation-selector-options="options"></div>
           </div>
+          <span ga-help="11"></span>
         </div>
       </form>
 % endif
@@ -121,6 +121,7 @@
       <div id="scaleline" class="pull-left" ga-scale-line ga-scale-line-map="map"></div>
 % if device == 'desktop':
       <div id="mouseposition" class="pull-left visible-lg" ng-controller="GaMousePositionController">
+        <span ga-help="12"></span>
         <select
           ng-model="options.projection"
           ng-options="p.label for p in mousePositionProjections">
