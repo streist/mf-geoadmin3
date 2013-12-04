@@ -76,10 +76,6 @@
               currentTopic = topic.id;
             });
 
-            $scope.$on('gaTimeSelectorChange', function(event, currentyear) {
-              year = currentyear;
-            });
-
             gaMapClick.listen(map, function(evt) {
               var size = map.getSize();
               var mapExtent = map.getView().calculateExtent(size);
@@ -253,6 +249,7 @@
                   timestamps = getLayerTimestamps(bodId);
                   if (angular.isDefined(timestamps)) {
                     src = l.getSource();
+                    year = gaLayers.getLayersTime();
                     layerToQuery.year = year;
                     //FIXME: we should use new 'timebehaviour' attribute
                     //to define what should happen if we have

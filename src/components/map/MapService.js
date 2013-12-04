@@ -448,7 +448,7 @@
         this.getOlLayerById = function(bodId) {
           var layer = layers[bodId];
           var olLayer;
-          var time = (layer.timeEnabled) ?
+          var time = layer.timeEnabled ?
               currentTime : false;
           var attributions = [
             gaMapUtils.getAttribution('<a href="' +
@@ -569,6 +569,14 @@
           return $http.get(url);
         };
 
+        this.setLayersTime = function(time) {
+          currentTime = time;
+        };
+
+        this.getLayersTime = function() {
+          return currentTime;
+        };
+
         $rootScope.$on('gaTopicChange', function(event, topic) {
           currentTopic = topic;
           // do nothing if there's no lang set
@@ -593,10 +601,6 @@
                   {labelsOnly: labelsOnly, topicId: currentTopicId});
             });
           }
-        });
-
-        $rootScope.$on('gaTimeSelectorChange', function(event, time) {
-          currentTime = time;
         });
       };
 

@@ -316,6 +316,7 @@
               } else {
                 // Here we don't set currentYear as undefined to keep the last
                 // value selected by the user.
+                gaLayers.setLayersTime(undefined);
                 applyNewYear((active ? scope.currentYear : undefined));
               }
             }
@@ -342,9 +343,9 @@
               if (newYear === undefined) {
                 gaPermalink.deleteParam('time');
               } else {
+                gaLayers.setLayersTime(newYear);
                 gaPermalink.updateParams({time: newYear});
               }
-              $rootScope.$broadcast('gaTimeSelectorChange', newYear);
             }
           };
           var applyNewYearDebounced = gaDebounce.debounce(applyNewYear, 200,
