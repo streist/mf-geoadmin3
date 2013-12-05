@@ -447,9 +447,7 @@
          */
         this.getOlLayerById = function(bodId) {
           var layer = layers[bodId];
-          var olLayer;
-          var time = layer.timeEnabled ?
-              currentTime : false;
+          var olLayer, params;
           var attributions = [
             gaMapUtils.getAttribution('<a href="' +
               layer.attributionUrl +
@@ -458,12 +456,12 @@
           ];
           var olSource = layer.olSource;
           if (layer.type == 'wmts') {
+            params = this.getLayerParams(bodId);
+
             if (!olSource) {
               olSource = layer.olSource = new ol.source.WMTS({
                 attributions: attributions,
-                dimensions: {
-                  'Time': time || layer.timestamps[0]
-                },
+                dimensions: params,
                 projection: 'EPSG:21781',
                 requestEncoding: 'REST',
                 tileGrid: gaTileGrid.get(layer.resolutions),
@@ -480,20 +478,13 @@
           } else if (layer.type == 'wms') {
             var wmsUrl = gaUrlUtils.remove(
                 layer.wmsUrl, ['request', 'service', 'version'], true);
+            params = this.getLayerParams(bodId);
 
-            var wmsParams = {
-              LAYERS: layer.wmsLayers,
-              FORMAT: 'image/' + layer.format
-            };
-
-            if (layer.timeEnabled && angular.isDefined(time)) {
-              wmsParams['TIME'] = time || layer.timestamps[0];
-            }
             if (layer.singleTile === true) {
               if (!olSource) {
                 olSource = layer.olSource = new ol.source.ImageWMS({
                   url: wmsUrl,
-                  params: wmsParams,
+                  params: params,
                   attributions: attributions,
                   ratio: 1
                 });
@@ -508,7 +499,7 @@
               if (!olSource) {
                 olSource = layer.olSource = new ol.source.TileWMS({
                   url: wmsUrl,
-                  params: wmsParams,
+                  params: params,
                   attributions: attributions
                 });
               }
@@ -567,6 +558,25 @@
         this.getMetaDataOfLayer = function(bodId) {
           var url = getMetaDataUrl(currentTopic.id, bodId, $translate.uses());
           return $http.get(url);
+        };
+
+        this.getLayerParams = function(bodId) {
+          var layer = layers[bodId];
+          var time = layer.timeEnabled ?
+              currentTime : '';
+          if (layer.type == 'wmts') {
+            return { 'Time': time !== '' ? time : layer.timestamps[0] };
+          } else if (layer.type == 'wms') {
+            var wmsParams = {
+              LAYERS: layer.wmsLayers,
+              FORMAT: 'image/' + layer.format
+            };
+            if (layer.timeEnabled && angular.isDefined(time)) {
+              wmsParams['TIME'] = typeof(time) === 'string' ?
+                  time : layer.timestamps[0];
+            }
+            return wmsParams;
+          }
         };
 
         this.setLayersTime = function(time) {

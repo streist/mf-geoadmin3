@@ -69,6 +69,13 @@
               layer = gaLayers.getOlLayerById(item.idBod);
               if (angular.isDefined(layer)) {
                 error = false;
+                var params = gaLayers.getLayerParams(item.idBod);
+                var src = layer.getSource();
+                if (src instanceof ol.source.WMTS) {
+                  layer.getSource().updateDimensions(params);
+                } else {
+                  layer.getSource().updateParams(params);
+                }
                 layer.preview = true;
                 map.addLayer(layer);
               }
@@ -85,6 +92,13 @@
               map, item.idBod);
           if (angular.isDefined(layer) && layer.preview) {
             map.removeLayer(layer);
+            var params = gaLayers.getLayerParams(item.idBod);
+            var src = layer.getSource();
+            if (src instanceof ol.source.WMTS) {
+              layer.getSource().updateDimensions(params);
+            } else {
+              layer.getSource().updateParams(params);
+            }
             layer.preview = false;
           }
         }
@@ -107,6 +121,13 @@
           if (!angular.isDefined(layer)) {
             gaCatalogtreeMapUtils.addLayer(map, item);
           } else {
+            var params = gaLayers.getLayerParams(item.idBod);
+            var src = layer.getSource();
+            if (src instanceof ol.source.WMTS) {
+              layer.getSource().updateDimensions(params);
+            } else {
+              layer.getSource().updateParams(params);
+            }
             if (!layer.preview) {
               map.removeLayer(layer);
             } else {

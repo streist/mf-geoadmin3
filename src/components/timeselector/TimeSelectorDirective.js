@@ -316,7 +316,7 @@
               } else {
                 // Here we don't set currentYear as undefined to keep the last
                 // value selected by the user.
-                gaLayers.setLayersTime(undefined);
+                gaLayers.setLayersTime('');
                 applyNewYear((active ? scope.currentYear : undefined));
               }
             }
