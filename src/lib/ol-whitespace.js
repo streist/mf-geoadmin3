@@ -526,15 +526,15 @@ goog.addDependency("../build/src/internal/src/requireall.js", [], ["libtess", "l
 "ol.parser.TopoJSON", "ol.parser.WKT", "ol.parser.XML", "ol.parser.ogc.ExceptionReport", "ol.parser.ogc.Filter", "ol.parser.ogc.Filter_v1", "ol.parser.ogc.Filter_v1_0_0", "ol.parser.ogc.Filter_v1_1_0", "ol.parser.ogc.GML", "ol.parser.ogc.GML_v2", "ol.parser.ogc.GML_v3", "ol.parser.ogc.OWSCommon_v1", "ol.parser.ogc.OWSCommon_v1_1_0", "ol.parser.ogc.SLD", "ol.parser.ogc.SLD_v1", "ol.parser.ogc.SLD_v1_0_0", "ol.parser.ogc.Versioned", "ol.parser.ogc.WFS", "ol.parser.ogc.WFS_v1", "ol.parser.ogc.WFS_v1_0_0", 
 "ol.parser.ogc.WFS_v1_1_0", "ol.parser.ogc.WMSCapabilities", "ol.parser.ogc.WMSCapabilities_v1", "ol.parser.ogc.WMSCapabilities_v1_0_0", "ol.parser.ogc.WMSCapabilities_v1_1", "ol.parser.ogc.WMSCapabilities_v1_1_0", "ol.parser.ogc.WMSCapabilities_v1_1_1", "ol.parser.ogc.WMSCapabilities_v1_1_1_WMSC", "ol.parser.ogc.WMSCapabilities_v1_3_0", "ol.parser.ogc.WMTSCapabilities", "ol.parser.ogc.WMTSCapabilities_v1_0_0", "ol.parser.polyline", "ol.proj", "ol.proj.CH", "ol.proj.EPSG2056", "ol.proj.EPSG21781", 
 "ol.proj.EPSG3857", "ol.proj.EPSG4326", "ol.proj.Projection", "ol.proj.ProjectionLike", "ol.proj.Units", "ol.proj.common", "ol.renderer.Layer", "ol.renderer.Map", "ol.renderer.canvas", "ol.renderer.canvas.ImageLayer", "ol.renderer.canvas.Layer", "ol.renderer.canvas.Map", "ol.renderer.canvas.TileLayer", "ol.renderer.canvas.Vector", "ol.renderer.canvas.VectorLayer", "ol.renderer.dom", "ol.renderer.dom.ImageLayer", "ol.renderer.dom.Layer", "ol.renderer.dom.Map", "ol.renderer.dom.TileLayer", "ol.renderer.webgl", 
-"ol.renderer.webgl.ImageLayer", "ol.renderer.webgl.Layer", "ol.renderer.webgl.Map", "ol.renderer.webgl.TileLayer", "ol.renderer.webgl.map.shader.Color", "ol.renderer.webgl.map.shader.Default", "ol.renderer.webgl.tilelayer.shader", "ol.size", "ol.source.BingMaps", "ol.source.FeatureCache", "ol.source.FeatureInfoSource", "ol.source.Image", "ol.source.ImageStatic", "ol.source.ImageWMS", "ol.source.MapQuestOSM", "ol.source.MapQuestOpenAerial", "ol.source.OSM", "ol.source.Source", "ol.source.Stamen", 
-"ol.source.State", "ol.source.Tile", "ol.source.TileDebug", "ol.source.TileImage", "ol.source.TileJSON", "ol.source.TileOptions", "ol.source.TileWMS", "ol.source.Vector", "ol.source.VectorEventType", "ol.source.VectorLoadState", "ol.source.WMSGetFeatureInfoMethod", "ol.source.WMTS", "ol.source.WMTSRequestEncoding", "ol.source.XYZ", "ol.source.wms", "ol.sphere.NORMAL", "ol.sphere.WGS84", "ol.structs.Buffer", "ol.structs.IntegerSet", "ol.structs.LRUCache", "ol.structs.PriorityQueue", "ol.structs.RBush", 
-"ol.style", "ol.style.Fill", "ol.style.Icon", "ol.style.IconLiteral", "ol.style.LineLiteral", "ol.style.Literal", "ol.style.Point", "ol.style.PointLiteral", "ol.style.PolygonLiteral", "ol.style.Rule", "ol.style.Shape", "ol.style.ShapeLiteral", "ol.style.ShapeType", "ol.style.Stroke", "ol.style.StrokeDefaults", "ol.style.Style", "ol.style.Symbolizer", "ol.style.Text", "ol.style.TextLiteral", "ol.tilegrid.TileGrid", "ol.tilegrid.WMTS", "ol.tilegrid.XYZ", "ol.tilejson", "ol.vec.Mat4", "ol.webgl", "ol.webgl.WebGLContextEventType", 
-"ol.webgl.shader"]);
+"ol.renderer.webgl.ImageLayer", "ol.renderer.webgl.Layer", "ol.renderer.webgl.Map", "ol.renderer.webgl.TileLayer", "ol.renderer.webgl.map.shader.Color", "ol.renderer.webgl.map.shader.Default", "ol.renderer.webgl.tilelayer.shader", "ol.size", "ol.source.BingMaps", "ol.source.FeatureCache", "ol.source.FeatureInfoSource", "ol.source.Image", "ol.source.ImageStatic", "ol.source.ImageWMS", "ol.source.MapGuide", "ol.source.MapQuestOSM", "ol.source.MapQuestOpenAerial", "ol.source.OSM", "ol.source.Source", 
+"ol.source.Stamen", "ol.source.State", "ol.source.Tile", "ol.source.TileDebug", "ol.source.TileImage", "ol.source.TileJSON", "ol.source.TileOptions", "ol.source.TileWMS", "ol.source.Vector", "ol.source.VectorEventType", "ol.source.VectorLoadState", "ol.source.WMSGetFeatureInfoMethod", "ol.source.WMTS", "ol.source.WMTSRequestEncoding", "ol.source.XYZ", "ol.source.wms", "ol.sphere.NORMAL", "ol.sphere.WGS84", "ol.structs.Buffer", "ol.structs.IntegerSet", "ol.structs.LRUCache", "ol.structs.PriorityQueue", 
+"ol.structs.RBush", "ol.style", "ol.style.Fill", "ol.style.Icon", "ol.style.IconLiteral", "ol.style.LineLiteral", "ol.style.Literal", "ol.style.Point", "ol.style.PointLiteral", "ol.style.PolygonLiteral", "ol.style.Rule", "ol.style.Shape", "ol.style.ShapeLiteral", "ol.style.ShapeType", "ol.style.Stroke", "ol.style.StrokeDefaults", "ol.style.Style", "ol.style.Symbolizer", "ol.style.Text", "ol.style.TextLiteral", "ol.tilegrid.TileGrid", "ol.tilegrid.WMTS", "ol.tilegrid.XYZ", "ol.tilejson", "ol.vec.Mat4", 
+"ol.webgl", "ol.webgl.WebGLContextEventType", "ol.webgl.shader"]);
 goog.addDependency("../build/src/internal/src/types.js", ["ol.AttributionOptions", "ol.DeviceOrientationOptions", "ol.GeolocationOptions", "ol.GetFeatureInfoOptions", "ol.GetFeaturesOptions", "ol.MapOptions", "ol.OverlayOptions", "ol.Proj4jsProjectionOptions", "ol.ProjectionOptions", "ol.View2DOptions", "ol.animation.BounceOptions", "ol.animation.PanOptions", "ol.animation.RotateOptions", "ol.animation.ZoomOptions", "ol.control.AttributionOptions", "ol.control.ControlOptions", "ol.control.DefaultsOptions", 
 "ol.control.FullScreenOptions", "ol.control.LogoOptions", "ol.control.MousePositionOptions", "ol.control.ScaleLineOptions", "ol.control.ZoomOptions", "ol.control.ZoomSliderOptions", "ol.control.ZoomToExtentOptions", "ol.interaction.DefaultsOptions", "ol.interaction.DoubleClickZoomOptions", "ol.interaction.DragPanOptions", "ol.interaction.DragRotateAndZoomOptions", "ol.interaction.DragRotateOptions", "ol.interaction.DragZoomOptions", "ol.interaction.DrawOptions", "ol.interaction.KeyboardPanOptions", 
 "ol.interaction.KeyboardZoomOptions", "ol.interaction.ModifyOptions", "ol.interaction.MouseWheelZoomOptions", "ol.interaction.SelectOptions", "ol.interaction.TouchPanOptions", "ol.interaction.TouchRotateOptions", "ol.interaction.TouchZoomOptions", "ol.layer.BaseOptions", "ol.layer.GroupOptions", "ol.layer.LayerOptions", "ol.layer.TileOptions", "ol.layer.VectorLayerOptions", "ol.parser.GMLOptions", "ol.parser.GMLReadOptions", "ol.parser.GMLWriteOptions", "ol.parser.GPXOptions", "ol.parser.GPXWriteOptions", 
-"ol.parser.KMLOptions", "ol.parser.SLDReadOptions", "ol.parser.SLDWriteOptions", "ol.source.BingMapsOptions", "ol.source.ImageStaticOptions", "ol.source.ImageWMSOptions", "ol.source.MapQuestOptions", "ol.source.OSMOptions", "ol.source.StamenOptions", "ol.source.TileDebugOptions", "ol.source.TileJSONOptions", "ol.source.TileWMSOptions", "ol.source.VectorOptions", "ol.source.WMTSOptions", "ol.source.XYZOptions", "ol.style.FillOptions", "ol.style.IconOptions", "ol.style.RuleOptions", "ol.style.ShapeOptions", 
-"ol.style.StrokeOptions", "ol.style.StyleOptions", "ol.style.TextOptions", "ol.tilegrid.TileGridOptions", "ol.tilegrid.WMTSOptions", "ol.tilegrid.XYZOptions"], []);
+"ol.parser.KMLOptions", "ol.parser.SLDReadOptions", "ol.parser.SLDWriteOptions", "ol.parser.WFSWriteGetFeatureOptions", "ol.parser.WFSWriteTransactionOptions", "ol.source.BingMapsOptions", "ol.source.ImageStaticOptions", "ol.source.ImageWMSOptions", "ol.source.MapGuideOptions", "ol.source.MapQuestOptions", "ol.source.OSMOptions", "ol.source.StamenOptions", "ol.source.TileDebugOptions", "ol.source.TileJSONOptions", "ol.source.TileWMSOptions", "ol.source.VectorOptions", "ol.source.WMTSOptions", "ol.source.XYZOptions", 
+"ol.style.FillOptions", "ol.style.IconOptions", "ol.style.RuleOptions", "ol.style.ShapeOptions", "ol.style.StrokeOptions", "ol.style.StyleOptions", "ol.style.TextOptions", "ol.tilegrid.TileGridOptions", "ol.tilegrid.WMTSOptions", "ol.tilegrid.XYZOptions"], []);
 goog.addDependency("../src/libtess.js/dict/Dict.js", ["libtess.Dict"], ["libtess", "libtess.DictNode"]);
 goog.addDependency("../src/libtess.js/dict/DictNode.js", ["libtess.DictNode"], ["libtess"]);
 goog.addDependency("../src/libtess.js/geom.js", ["libtess.geom"], ["libtess"]);
@@ -666,7 +666,7 @@ goog.addDependency("../src/ol/parser/ogc/sldparser_v1.js", ["ol.parser.ogc.SLD_v
 goog.addDependency("../src/ol/parser/ogc/sldparser_v1_0_0.js", ["ol.parser.ogc.SLD_v1_0_0"], ["ol.parser.ogc.SLD_v1"]);
 goog.addDependency("../src/ol/parser/ogc/versionedparser.js", ["ol.parser.ogc.Versioned"], ["goog.dom.xml", "ol.parser.ogc.ExceptionReport"]);
 goog.addDependency("../src/ol/parser/ogc/wfsparser.js", ["ol.parser.ogc.WFS"], ["ol.parser.ogc.Versioned", "ol.parser.ogc.WFS_v1_0_0", "ol.parser.ogc.WFS_v1_1_0"]);
-goog.addDependency("../src/ol/parser/ogc/wfsparser_v1.js", ["ol.parser.ogc.WFS_v1"], ["goog.dom.xml", "ol.parser.XML"]);
+goog.addDependency("../src/ol/parser/ogc/wfsparser_v1.js", ["ol.parser.ogc.WFS_v1"], ["goog.asserts", "goog.dom.xml", "ol.expr.Call", "ol.expr.Identifier", "ol.expr.Literal", "ol.geom.Geometry", "ol.parser.XML"]);
 goog.addDependency("../src/ol/parser/ogc/wfsparser_v1_0_0.js", ["ol.parser.ogc.WFS_v1_0_0"], ["goog.array", "goog.functions", "goog.object", "ol.parser.ogc.Filter_v1_0_0", "ol.parser.ogc.WFS_v1"]);
 goog.addDependency("../src/ol/parser/ogc/wfsparser_v1_1_0.js", ["ol.parser.ogc.WFS_v1_1_0"], ["goog.asserts", "goog.functions", "goog.object", "ol.expr.Identifier", "ol.parser.ogc.Filter_v1_1_0", "ol.parser.ogc.WFS_v1"]);
 goog.addDependency("../src/ol/parser/ogc/wmscapabilitiesparser.js", ["ol.parser.ogc.WMSCapabilities"], ["ol.parser.ogc.Versioned", "ol.parser.ogc.WMSCapabilities_v1_0_0", "ol.parser.ogc.WMSCapabilities_v1_1_0", "ol.parser.ogc.WMSCapabilities_v1_1_1", "ol.parser.ogc.WMSCapabilities_v1_1_1_WMSC", "ol.parser.ogc.WMSCapabilities_v1_3_0"]);
@@ -723,6 +723,7 @@ goog.addDependency("../src/ol/source/featureinfosource.js", ["ol.source.FeatureI
 goog.addDependency("../src/ol/source/imagesource.js", ["ol.source.Image"], ["goog.array", "goog.asserts", "ol.Attribution", "ol.Extent", "ol.Image", "ol.ImageUrlFunction", "ol.ImageUrlFunctionType", "ol.Size", "ol.array", "ol.source.Source"]);
 goog.addDependency("../src/ol/source/imagestaticsource.js", ["ol.source.ImageStatic"], ["ol.Image", "ol.ImageUrlFunctionType", "ol.extent", "ol.proj", "ol.source.Image"]);
 goog.addDependency("../src/ol/source/imagewmssource.js", ["ol.source.ImageWMS"], ["goog.asserts", "goog.object", "ol.Image", "ol.ImageUrlFunction", "ol.extent", "ol.source.FeatureInfoSource", "ol.source.Image", "ol.source.wms"]);
+goog.addDependency("../src/ol/source/mapguidesource.js", ["ol.source.MapGuide"], ["goog.object", "goog.uri.utils", "ol.ImageUrlFunction", "ol.extent", "ol.source.Image"]);
 goog.addDependency("../src/ol/source/mapquestsource.js", ["ol.source.MapQuestOSM", "ol.source.MapQuestOpenAerial"], ["ol.Attribution", "ol.source.OSM", "ol.source.XYZ"]);
 goog.addDependency("../src/ol/source/osmsource.js", ["ol.source.OSM"], ["ol.Attribution", "ol.source.XYZ"]);
 goog.addDependency("../src/ol/source/source.js", ["ol.source.Source", "ol.source.State"], ["goog.events.EventTarget", "goog.events.EventType", "ol.Attribution", "ol.Extent", "ol.proj"]);
@@ -33517,7 +33518,7 @@ ol.parser.ogc.GML_v2 = function(opt_options) {
     for(var i = 0;i < numCoordinates;++i) {
       var coord = coordinates[i];
       var part = goog.array.concat(coord);
-      if(this.axisOrientation.substr(0, 2) !== "en") {
+      if(goog.isDef(this.axisOrientation) && this.axisOrientation.substr(0, 2) !== "en") {
         part[0] = coord[1];
         part[1] = coord[0]
       }
@@ -35139,10 +35140,14 @@ ol.parser.ogc.SLD = function(opt_options) {
 };
 goog.inherits(ol.parser.ogc.SLD, ol.parser.ogc.Versioned);
 goog.provide("ol.parser.ogc.WFS_v1");
+goog.require("goog.asserts");
 goog.require("goog.dom.xml");
+goog.require("ol.expr.Call");
+goog.require("ol.expr.Identifier");
+goog.require("ol.expr.Literal");
+goog.require("ol.geom.Geometry");
 goog.require("ol.parser.XML");
-ol.parser.WFSWriteOptions;
-ol.parser.ogc.WFS_v1 = function() {
+ol.parser.ogc.WFS_v1 = function(opt_options) {
   this.defaultNamespaceURI = "http://www.opengis.net/wfs";
   this.readers = {};
   this.readers[this.defaultNamespaceURI] = {"FeatureCollection":function(node, obj) {
@@ -35151,7 +35156,6 @@ ol.parser.ogc.WFS_v1 = function() {
   }};
   this.writers = {};
   this.writers[this.defaultNamespaceURI] = {"GetFeature":function(options) {
-    options = (options);
     var node = this.createElementNS("wfs:GetFeature");
     node.setAttribute("service", "WFS");
     node.setAttribute("version", this.version);
@@ -35173,21 +35177,25 @@ ol.parser.ogc.WFS_v1 = function() {
     this.setAttributeNS(node, "http://www.w3.org/2001/XMLSchema-instance", "xsi:schemaLocation", this.schemaLocation);
     return{node:node, options:options}
   }, "Transaction":function(obj) {
-    obj = obj || {};
-    var options = obj.options || {};
+    var options = obj.options;
+    this.setFeatureType(options.featureType);
+    this.setFeatureNS(options.featureNS);
+    if(goog.isDef(options.srsName)) {
+      this.setSrsName(options.srsName)
+    }
     var node = this.createElementNS("wfs:Transaction");
     node.setAttribute("service", "WFS");
     node.setAttribute("version", this.version);
     if(goog.isDef(options.handle)) {
       node.setAttribute("handle", options.handle)
     }
-    var i, ii;
-    var features = obj.features;
-    if(goog.isDefAndNotNull(features)) {
-      var name, feature;
-      for(i = 0, ii = features.length;i < ii;++i) {
-        feature = features[i];
-        if(goog.isDef(name)) {
+    var i, ii, features, feature;
+    var operations = {"Insert":obj.inserts, "Update":obj.updates, "Delete":obj.deletes};
+    for(var name in operations) {
+      features = operations[name];
+      if(!goog.isNull(features)) {
+        for(i = 0, ii = features.length;i < ii;++i) {
+          feature = features[i];
           this.writeNode(name, {feature:feature, options:options}, null, node)
         }
       }
@@ -35203,6 +35211,73 @@ ol.parser.ogc.WFS_v1 = function() {
     node.setAttribute("vendorId", nativeElement.vendorId);
     node.setAttribute("safeToIgnore", nativeElement.safeToIgnore);
     node.appendChild(this.createTextNode(nativeElement.value));
+    return node
+  }, "Insert":function(obj) {
+    var feature = obj.feature;
+    var options = obj.options;
+    var node = this.createElementNS("wfs:Insert");
+    if(goog.isDef(options) && goog.isDef(options.handle)) {
+      this.setAttributeNS(node, this.defaultNamespaceURI, "handle", options.handle)
+    }
+    if(goog.isDef(options.srsName)) {
+      this.setSrsName(options.srsName)
+    }
+    this.writeNode("_typeName", feature, options.featureNS, node);
+    return node
+  }, "Update":function(obj) {
+    var feature = obj.feature;
+    var options = obj.options;
+    var node = this.createElementNS("wfs:Update");
+    this.setAttributeNS(node, this.defaultNamespaceURI, "typeName", (goog.isDef(options.featureNS) ? options.featurePrefix + ":" : "") + options.featureType);
+    if(goog.isDef(options.handle)) {
+      this.setAttributeNS(node, this.defaultNamespaceURI, "handle", options.handle)
+    }
+    var original = feature.getOriginal();
+    var originalAttributes = goog.isNull(original) ? undefined : original.getAttributes();
+    var attributes = feature.getAttributes();
+    var attribute;
+    for(var key in attributes) {
+      attribute = attributes[key];
+      if(goog.isDef(attribute) && (attribute instanceof ol.geom.Geometry || !goog.isDef(originalAttributes) || attribute != originalAttributes[key])) {
+        this.writeNode("Property", {name:key, value:attribute}, null, node)
+      }
+    }
+    var fid = feature.getId();
+    goog.asserts.assert(goog.isDef(fid));
+    this.writeNode("Filter", new ol.expr.Call(new ol.expr.Identifier(ol.expr.functions.FID), [new ol.expr.Literal(fid)]), "http://www.opengis.net/ogc", node);
+    return node
+  }, "Property":function(obj) {
+    var node = this.createElementNS("wfs:Property");
+    this.writeNode("Name", obj.name, null, node);
+    if(!goog.isNull(obj.value)) {
+      this.writeNode("Value", obj.value, null, node)
+    }
+    return node
+  }, "Name":function(name) {
+    var node = this.createElementNS("wfs:Name");
+    node.appendChild(this.createTextNode(name));
+    return node
+  }, "Value":function(obj) {
+    var node;
+    if(obj instanceof ol.geom.Geometry) {
+      node = this.createElementNS("wfs:Value");
+      node.appendChild(this.getFilterParser().getGmlParser().writeGeometry(obj))
+    }else {
+      node = this.createElementNS("wfs:Value");
+      node.appendChild(this.createTextNode((obj)))
+    }
+    return node
+  }, "Delete":function(obj) {
+    var feature = obj.feature;
+    var options = obj.options;
+    var node = this.createElementNS("wfs:Delete");
+    this.setAttributeNS(node, this.defaultNamespaceURI, "typeName", (goog.isDef(options.featureNS) ? options.featurePrefix + ":" : "") + options.featureType);
+    if(goog.isDef(options.handle)) {
+      this.setAttributeNS(node, this.defaultNamespaceURI, "handle", options.handle)
+    }
+    var fid = feature.getId();
+    goog.asserts.assert(goog.isDef(fid));
+    this.writeNode("Filter", new ol.expr.Call(new ol.expr.Identifier(ol.expr.functions.FID), [new ol.expr.Literal(fid)]), "http://www.opengis.net/ogc", node);
     return node
   }};
   goog.base(this)
@@ -35267,8 +35342,12 @@ ol.parser.ogc.WFS_v1.prototype.read = function(data) {
   this.readNode(data, obj);
   return obj
 };
-ol.parser.ogc.WFS_v1.prototype.write = function(features, options) {
-  var root = this.writeNode("Transaction", {features:features, options:options});
+ol.parser.ogc.WFS_v1.prototype.writeGetFeature = function(options) {
+  var root = this.writers[this.defaultNamespaceURI]["GetFeature"].call(this, options);
+  return this.serialize(root)
+};
+ol.parser.ogc.WFS_v1.prototype.writeTransaction = function(inserts, updates, deletes, options) {
+  var root = this.writeNode("Transaction", {inserts:inserts, updates:updates, deletes:deletes, options:options});
   this.setAttributeNS(root, "http://www.w3.org/2001/XMLSchema-instance", "xsi:schemaLocation", this.schemaLocation);
   return this.serialize(root)
 };
@@ -36908,6 +36987,63 @@ ol.source.ImageWMS.prototype.updateParams = function(params) {
   this.image_ = null;
   this.dispatchChangeEvent()
 };
+goog.provide("ol.source.MapGuide");
+goog.require("goog.object");
+goog.require("goog.uri.utils");
+goog.require("ol.ImageUrlFunction");
+goog.require("ol.extent");
+goog.require("ol.source.Image");
+ol.source.MapGuide = function(options) {
+  var imageUrlFunction;
+  if(goog.isDef(options.url)) {
+    var params = goog.isDef(options.params) ? options.params : {};
+    imageUrlFunction = ol.ImageUrlFunction.createFromParamsFunction(options.url, params, goog.bind(this.getUrl, this))
+  }else {
+    imageUrlFunction = ol.ImageUrlFunction.nullImageUrlFunction
+  }
+  goog.base(this, {extent:options.extent, projection:options.projection, resolutions:options.resolutions, imageUrlFunction:imageUrlFunction});
+  this.metersPerUnit_ = goog.isDef(options.metersPerUnit) ? options.metersPerUnit : 1;
+  this.ratio_ = goog.isDef(options.ratio) ? options.ratio : 1;
+  this.useOverlay_ = goog.isDef(options.useOverlay) ? options.useOverlay : false;
+  this.image_ = null
+};
+goog.inherits(ol.source.MapGuide, ol.source.Image);
+ol.source.MapGuide.prototype.getImage = function(extent, resolution, projection) {
+  resolution = this.findNearestResolution(resolution);
+  var image = this.image_;
+  if(!goog.isNull(image) && image.getResolution() == resolution && ol.extent.containsExtent(image.getExtent(), extent)) {
+    return image
+  }
+  if(this.ratio_ != 1) {
+    extent = extent.slice();
+    ol.extent.scaleFromCenter(extent, this.ratio_)
+  }
+  var width = (extent[2] - extent[0]) / resolution;
+  var height = (extent[3] - extent[1]) / resolution;
+  var size = [width, height];
+  this.image_ = this.createImage(extent, resolution, size, projection);
+  return this.image_
+};
+ol.source.MapGuide.prototype.getScale = function(extent, size) {
+  var mcsW = extent[2] - extent[0];
+  var mcsH = extent[3] - extent[1];
+  var devW = size[0];
+  var devH = size[1];
+  var dpi = 96;
+  var mpu = this.metersPerUnit_;
+  var mpp = 0.0254 / dpi;
+  if(devH * mcsW > devW * mcsH) {
+    return mcsW * mpu / (devW * mpp)
+  }else {
+    return mcsH * mpu / (devH * mpp)
+  }
+};
+ol.source.MapGuide.prototype.getUrl = function(baseUrl, params, extent, size, projection) {
+  var scale = this.getScale(extent, size);
+  var baseParams = {"OPERATION":this.useOverlay_ ? "GETDYNAMICMAPOVERLAYIMAGE" : "GETMAPIMAGE", "VERSION":"2.0.0", "LOCALE":"en", "CLIENTAGENT":"ol.source.MapGuide source", "CLIP":"1", "SETDISPLAYDPI":96, "SETDISPLAYWIDTH":Math.round(size[0]), "SETDISPLAYHEIGHT":Math.round(size[1]), "SETVIEWSCALE":scale, "SETVIEWCENTERX":(extent[0] + extent[2]) / 2, "SETVIEWCENTERY":(extent[1] + extent[3]) / 2};
+  goog.object.extend(baseParams, params);
+  return goog.uri.utils.appendParamsFromMap(baseUrl, baseParams)
+};
 goog.provide("ol.source.XYZ");
 goog.require("ol.Attribution");
 goog.require("ol.TileUrlFunction");
@@ -37666,6 +37802,7 @@ goog.require("ol.source.FeatureInfoSource");
 goog.require("ol.source.Image");
 goog.require("ol.source.ImageStatic");
 goog.require("ol.source.ImageWMS");
+goog.require("ol.source.MapGuide");
 goog.require("ol.source.MapQuestOSM");
 goog.require("ol.source.MapQuestOpenAerial");
 goog.require("ol.source.OSM");
@@ -37772,9 +37909,12 @@ goog.provide("ol.parser.GPXWriteOptions");
 goog.provide("ol.parser.KMLOptions");
 goog.provide("ol.parser.SLDReadOptions");
 goog.provide("ol.parser.SLDWriteOptions");
+goog.provide("ol.parser.WFSWriteGetFeatureOptions");
+goog.provide("ol.parser.WFSWriteTransactionOptions");
 goog.provide("ol.source.BingMapsOptions");
 goog.provide("ol.source.ImageStaticOptions");
 goog.provide("ol.source.ImageWMSOptions");
+goog.provide("ol.source.MapGuideOptions");
 goog.provide("ol.source.MapQuestOptions");
 goog.provide("ol.source.OSMOptions");
 goog.provide("ol.source.StamenOptions");
@@ -37846,9 +37986,12 @@ ol.parser.GPXWriteOptions;
 ol.parser.KMLOptions;
 ol.parser.SLDReadOptions;
 ol.parser.SLDWriteOptions;
+ol.parser.WFSWriteGetFeatureOptions;
+ol.parser.WFSWriteTransactionOptions;
 ol.source.BingMapsOptions;
 ol.source.ImageStaticOptions;
 ol.source.ImageWMSOptions;
+ol.source.MapGuideOptions;
 ol.source.MapQuestOptions;
 ol.source.OSMOptions;
 ol.source.StamenOptions;
