@@ -1,15 +1,10 @@
 (function() {
   goog.provide('ga_importkml_directive');
 
-  goog.require('ga_browsersniffer_service');
   goog.require('ga_map_service');
-  goog.require('ga_urlutils_service');
 
   var module = angular.module('ga_importkml_directive', [
-    'ga_browsersniffer_service',
-    'ga_map_service',
-    'ga_urlutils_service',
-    'pascalprecht.translate'
+    'ga_map_service'
   ]);
 
   module.controller('GaImportKmlDirectiveController',

@@ -4,6 +4,7 @@
   goog.require('ga_popup_service');
   goog.require('ga_urlutils_service');
 
+
   var module = angular.module('ga_map_service', [
     'pascalprecht.translate',
     'ga_popup_service',
