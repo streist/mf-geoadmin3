@@ -18,6 +18,7 @@ describe('ga_contextpopup_directive', function() {
       '</div>');
 
     inject(function($rootScope, $compile) {
+      ol.proj.CH.add();
       map = new ol.Map({});
       $rootScope.map = map;
       $rootScope.options = {
