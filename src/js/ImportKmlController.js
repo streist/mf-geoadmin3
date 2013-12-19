@@ -6,7 +6,7 @@
   module.controller('GaImportKmlController',
       function($scope, gaGlobalOptions) {
          $scope.options = {
-           maxFileSize: 20000000, //20mo
+           maxFileSize: 20000000000, //20mo
            proxyUrl: gaGlobalOptions.baseUrlPath + '/ogcproxy?url=',
            validationServiceUrl: 'http://www.kmlvalidator.org/validate.htm'
          };
