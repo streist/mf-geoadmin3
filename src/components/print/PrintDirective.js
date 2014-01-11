@@ -46,14 +46,62 @@
         $scope.layout = data.layouts[0];
         $scope.dpi = data.dpis[0];
         $scope.scales = data.scales;
+        $scope.scale = data.scales[5];
         $scope.options.legend = false;
         $scope.options.graticule = false;
       });
     };
 
+
+   var overlay_ = new ol.render.FeaturesOverlay();
+   var printRecFeature = new ol.Feature();
+
+   var defaultStyleFunction = (function() {
+   /** @type {Object.<ol.geom.GeometryType, Array.<ol.style.Style>>} */
+     var styles = {};
+     styles[ol.geom.GeometryType.POLYGON] = [
+       new ol.style.Style({
+         fill: new ol.style.Fill({
+           color: 'rgba(200, 5, 25, 0.5)'
+         })
+       })
+     ];
+     styles[ol.geom.GeometryType.MULTI_POINT] =
+       styles[ol.geom.GeometryType.POINT];
+
+    styles[ol.geom.GeometryType.LINE_STRING] = [
+        new ol.style.Style({
+          stroke: new ol.style.Stroke({
+            color: [255, 255, 255, 1],
+            lineCap: 'round',
+            width: 5
+          })
+        }),
+        new ol.style.Style({
+          stroke: new ol.style.Stroke({
+            color: [0, 153, 255, 1],
+            lineCap: 'round',
+            width: 3
+          })
+        })
+      ];
+      styles[ol.geom.GeometryType.MULTI_LINE_STRING] =
+          styles[ol.geom.GeometryType.LINE_STRING];
+
+     return function(feature, resolution) {
+       return styles[feature.getGeometry().getType()];
+     };
+   })();
+
+
+
     $scope.$on('gaTopicChange', function(event, topic) {
       topicId = topic.id;
       updatePrintConfig();
+    });
+    $scope.map.on('moveend', function(event) {
+      event.stopPropagation();
+      updatePrintRectangle($scope.scale);
     });
 
     var encodeLayer = function(layer, proj) {
@@ -176,6 +224,7 @@
        * graphicYOffset
        * zIndex
        */
+
       var literal = {
         zIndex: style.getZIndex()
       };
@@ -514,11 +563,12 @@
           qrcodeurl: qrcodeurl,
           pages: [
           angular.extend({
-            center: view.getCenter(),
+          center: printRecFeature.getGeometry().getInteriorPoint(),
+          shortLink: '',
             // scale has to be one of the advertise by the print server
-            scale: getNearestScale(scale, scales),
-            dataOwner: '© ' + attributions.join(),
-            shortLink: response.shorturl.replace('/shorten', '')
+          scale: $scope.scale.value,
+          dataOwner: '© ' + attributions.join(),
+          shortLink: response.shorturl.replace('/shorten', '')
           }, defaultPage)]
         };
         var http = $http.post(that.capabilities.createURL +
@@ -534,6 +584,64 @@
         });
       });
     };
+
+    var showPrintRectangle = function() {
+        var geom = new ol.geom.Polygon(
+                    [[[600000, 200000], [650000, 200000], [650000, 250000],
+                     [600000, 250000], [600000, 200000]]]);
+        printRecFeature.setGeometry(geom);
+        overlay_.setStyleFunction(defaultStyleFunction);
+        overlay_.setMap($scope.map);
+        overlay_.addFeature(printRecFeature);
+
+    };
+    var hidePrintRectangle = function() {
+      overlay_.removeFeature(printRecFeature);
+    };
+    var updatePrintRectangle = function(scale) {
+      if ($scope.options.active) {
+        var extent = calculatePageBounds(scale);
+        printRecFeature.setGeometry(extent);
+      }
+    };
+
+    var calculatePageBounds = function(scale) {
+        var s = parseFloat(scale.value);
+        var size = $scope.layout.map;
+        var view = $scope.map.getView();
+        var center = view.getCenter();
+
+        var unitsRatio = 39.37;
+        var w = size.width / 72 / unitsRatio * s / 2;
+        var h = size.height / 72 / unitsRatio * s / 2;
+
+        var minx, miny, maxx, maxy;
+
+        minx = center[0] - w;
+        miny = center[1] - h;
+        maxx = center[0] + w;
+        maxy = center[1] + h;
+
+        return new ol.geom.Polygon(
+                    [[[minx, miny], [maxx, miny], [maxx, maxy],
+                     [minx, maxy], [minx, miny]]]);
+    };
+
+    $scope.$watch('options.active', function(newVal, oldVal) {
+      if (newVal === true) {
+        showPrintRectangle();
+        updatePrintRectangle($scope.scale);
+      } else {
+        hidePrintRectangle();
+      }
+    });
+    $scope.$watch('scale', function() {
+      updatePrintRectangle($scope.scale);
+    });
+    $scope.$watch('layout', function() {
+      updatePrintRectangle($scope.scale);
+    });
+
   });
 
   module.directive('gaPrint',
