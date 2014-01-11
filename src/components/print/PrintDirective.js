@@ -99,8 +99,7 @@
       topicId = topic.id;
       updatePrintConfig();
     });
-    $scope.map.on('moveend', function(event) {
-      event.stopPropagation();
+    $scope.map.on('drag', function(event) {
       updatePrintRectangle($scope.scale);
     });
 
