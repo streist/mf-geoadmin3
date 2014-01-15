@@ -614,7 +614,7 @@
         var bottomLeft = printRectangle.slice(0, 2);
         var width = printRectangle[2] - printRectangle[0];
         var height = printRectangle[3] - printRectangle[1];
-        var center = [bottomLeft[0] + width/2, bottomLeft[1] + height/2 ];
+        var center = [bottomLeft[0] + width / 2, bottomLeft[1] + height / 2];
 
         return $scope.map.getCoordinateFromPixel(center);
     };
@@ -625,10 +625,11 @@
         var extent = extent.getExtent();
         var bottomLeft = $scope.map.getPixelFromCoordinate(extent.slice(0, 2));
         var topRight = $scope.map.getPixelFromCoordinate(extent.slice(2, 4));
-        printRectangle = [bottomLeft[0], bottomLeft[1], topRight[0], topRight[1]];
+        printRectangle = [bottomLeft[0], bottomLeft[1],
+                                   topRight[0], topRight[1]];
         $scope.map.requestRenderFrame();
       }
-    }; 
+    };
 
     var calculatePageBounds = function(scale) {
         var s = parseFloat(scale.value);
